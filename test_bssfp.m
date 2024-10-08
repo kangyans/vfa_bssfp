@@ -31,7 +31,7 @@ SSI_eqn = zeros(L,N);
 for i = 1:L
     for j = 1:N
     % epg
-    SSI_epg(:,i,j) = myCFAbSSFP(T1(j), T2(j), TR, deg2rad(FlipAng(i)), Nrf, Nprf);
+    SSI_epg(:,i,j) = myCFAbSSFP2(T1(j), T2(j), TR, deg2rad(FlipAng(i)), Nrf, Nprf);
 
     % equation
     SSI_eqn(i,j) = bssfpFunc(1, T1(j), T2(j), TR, deg2rad(FlipAng(i)), 2);
